@@ -54,6 +54,17 @@ public class Movement : MonoBehaviour {
 
 	void Update()
 	{
+		if ((Input.GetKey(KeyCode.LeftShift)) && (Input.GetKey(KeyCode.W))) 
+		{
+			anim.SetBool ("walk", false);
+			Run();
+			transform.Translate (0, 0, (speed * 2) * Time.deltaTime);
+		}
+		if (Input.GetKeyUp(KeyCode.LeftShift)) 
+		{
+			anim.SetBool ("run", false);
+			Walk ();
+		}
 		if (Input.GetKey(KeyCode.W)) 
 		{
 			anim.SetBool ("idle", false);
