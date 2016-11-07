@@ -3,6 +3,8 @@ using System.Collections;
 
 public class playerControl : MonoBehaviour 
 {
+
+    
 	public Animator anim;
 	int attack01;
 	int attack02;
@@ -22,6 +24,11 @@ public class playerControl : MonoBehaviour
 
 	void Awake () 
 	{
+        
+	}
+
+    void start()
+    {
 		anim = GetComponent<Animator>();
 		attack01 = Animator.StringToHash("attack_01");
 		attack02 = Animator.StringToHash("attack_02");
@@ -38,10 +45,10 @@ public class playerControl : MonoBehaviour
 		walk = Animator.StringToHash("walk");
 		taunt = Animator.StringToHash("taunt");
 		run = Animator.StringToHash("run");
-	}
-	
+    }
 
-	public void Attack01 ()
+
+    public void Attack01 ()
 	{
 		anim.SetTrigger(attack01);
 	}
@@ -115,5 +122,14 @@ public class playerControl : MonoBehaviour
 	{
 		anim.SetTrigger(run);
 	}
-	
+
+	void update()
+	{
+		if (Input.GetKeyDown(KeyCode.W))
+		{
+			Debug.Log("sunu suds");
+			Walk ();
+			transform.Translate (0, 0, 1f * Time.deltaTime);
+		}
+	}
 }
