@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class playerControl : MonoBehaviour 
+public class playerControl : MonoBehaviour
 {
 
     
@@ -122,14 +122,5 @@ public class playerControl : MonoBehaviour
 	{
 		anim.SetTrigger(run);
 	}
-
-	void update()
-	{
-		if (Input.GetKeyDown(KeyCode.W))
-		{
-			Debug.Log("sunu suds");
-			Walk ();
-			transform.Translate (0, 0, 1f * Time.deltaTime);
-		}
-	}
+		
 }
