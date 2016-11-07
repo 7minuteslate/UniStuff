@@ -123,17 +123,17 @@ public class Movement : MonoBehaviour {
 
 	public void Attack01 ()
 	{
-		anim.SetBool("attack01",true);
+		anim.SetBool("attack01",false);
 	}
 
 	public void Attack02 ()
 	{
-		anim.SetBool("attack02",true);
+		anim.SetBool("attack02",false);
 	}
 
 	public void Attack03 ()
 	{
-		anim.SetBool("attack03",true);
+		anim.SetBool("attack03",false);
 	}
 
 	public void BattleWalkBackward ()
@@ -158,27 +158,27 @@ public class Movement : MonoBehaviour {
 
 	public void Defend ()
 	{
-		anim.SetBool("defend",true);
+		anim.SetBool("defend",false);
 	}
 
 	public void Die ()
 	{
-		anim.SetBool("die",true);
+		anim.SetBool("die",false);
 	}
 
 	public void GetHit ()
 	{
-		anim.SetBool("getHit",true);
+		anim.SetBool("getHit",false);
 	}
 
 	public void Idle02 ()
 	{
-		anim.SetBool("idle_02",true);
+		anim.SetBool("idle_02",false);
 	}
 
 	public void Jump ()
 	{
-		anim.SetBool("jump",true);
+		anim.SetBool("jump",false);
 	}
 
 	public void Walk ()
@@ -188,7 +188,7 @@ public class Movement : MonoBehaviour {
 
 	public void Taunt ()
 	{
-		anim.SetBool("taunt",true);
+		anim.SetBool("taunt",false);
 	}
 
 	public void Run ()
